@@ -1,11 +1,12 @@
 ﻿using GSlate.CodingChallenge.Common.Models.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace GSlate.CodingChallenge.BusinessLogic.Interfaces
 {
-    public interface IUserBusinessLogic
+    public interface IUserProjectBusinessLogic
     {
-        public List<UserViewModel> GetUsers();
+        public List<UserProjectViewModel> GetUSerProjectsByUser(int UserId);
     }
 }

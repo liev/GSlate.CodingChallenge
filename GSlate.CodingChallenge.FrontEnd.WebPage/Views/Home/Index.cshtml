@@ -13,3 +13,31 @@
                     new SelectList(users,"Id","FullName"), "--", new { @class = "form-control" })
 
     </div>
+
+     <div id="DivGrid">
+         
+     </div>
+
+<script>
+
+
+    $(document).ready(
+        //Funtion to get Projects by User
+        function () {
+            $("#UserSelector").change(function () {
+                //console.log($(this).val());
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("RequestProjects", "Home")',
+                    contentType: "application/json; charset=utf-8",
+                    data: { userId: $(this).val() },
+                    dataType: "json",
+                    success: function(recData) { alert('Success'); },
+                    error: function() { alert('A error'); }
+                });
+
+
+            });
+        });
+</script>

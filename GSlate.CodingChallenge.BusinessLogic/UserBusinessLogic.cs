@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using GSlate.CodingChallenge.BussinessLogic.Interfaces;
 using GSlate.CodingChallenge.Common.Models.Entity;
 using GSlate.CodingChallenge.Common.Models.ViewModels;
 using GSlate.CodingChallenge.DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
 using GSlate.CodingChallenge.Common.Helper.Transform;
+using GSlate.CodingChallenge.BusinessLogic.Interfaces;
 
 namespace GSlate.CodingChallenge.BusinessLogic
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using GSlate.CodingChallenge.BusinessLogic;
-using GSlate.CodingChallenge.BussinessLogic.Interfaces;
+using GSlate.CodingChallenge.BusinessLogic.Interfaces;
 using GSlate.CodingChallenge.Common.Models.Entity;
 using GSlate.CodingChallenge.Common.Models.ViewModels;
 using GSlate.CodingChallenge.DataAccess;
@@ -35,7 +35,9 @@ namespace GSlate.CodingChallenge.FrontEnd.WebPage
             services.AddSingleton<IUserDataAccess, UserDataAccess>();
             services.AddSingleton<IUserBusinessLogic, UserBusinessLogic>();
 
-            
+            services.AddSingleton<IUserProjectDataAccess, UserProjectDataAccess>();
+            services.AddSingleton<IUserProjectBusinessLogic, UserProjectBusinessLogic>();
+
             services.AddControllersWithViews();
         }
 
