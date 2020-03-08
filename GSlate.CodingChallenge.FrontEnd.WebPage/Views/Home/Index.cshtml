@@ -1,0 +1,15 @@
+﻿@using GSlate.CodingChallenge.Common.Models.ViewModels
+
+@{
+    List<UserViewModel> users = ViewBag.Users;
+    ViewData["Title"] = "Home Page";
+
+}
+
+    <div class="text-center">
+        @*<h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+        @Html.DropDownList("UserSelector",
+                    new SelectList(users,"Id","FullName"), "--", new { @class = "form-control" })
+
+    </div>

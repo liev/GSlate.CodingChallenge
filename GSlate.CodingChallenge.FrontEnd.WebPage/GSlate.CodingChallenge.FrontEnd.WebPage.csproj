@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GSlate.CodingChallenge.BusinessLogic.Interfaces\GSlate.CodingChallenge.BusinessLogic.Interfaces.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.BusinessLogic\GSlate.CodingChallenge.BusinessLogic.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.Common.Models\GSlate.CodingChallenge.Common.Models.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.DataAccess\GSlate.CodingChallenge.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

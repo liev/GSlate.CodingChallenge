@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GSlate.CodingChallenge.BusinessLogic.Interfaces\GSlate.CodingChallenge.BusinessLogic.Interfaces.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.Common.Models\GSlate.CodingChallenge.Common.Models.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.DataAccess.Interfaces\GSlate.CodingChallenge.DataAccess.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
