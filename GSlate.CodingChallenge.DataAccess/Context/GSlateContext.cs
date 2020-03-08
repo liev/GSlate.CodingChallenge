@@ -15,7 +15,6 @@ namespace GSlate.CodingChallenge.Common.Models.Entity.Context
         public GSlateContext(DbContextOptions<GSlateContext> options)
             : base(options)
         {
-
         }
 
         public virtual DbSet<Project> Projects { get; set; }
@@ -26,6 +25,7 @@ namespace GSlate.CodingChallenge.Common.Models.Entity.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder.UseSqlServer("Data Source=localhost\\SQLEXPRESS;Initial Catalog=GSlate;Integrated Security=True");
             }
         }
 
@@ -35,39 +35,21 @@ namespace GSlate.CodingChallenge.Common.Models.Entity.Context
 
             modelBuilder.Entity<Project>(entity =>
             {
-                entity.ToTable("Project");
-
                 entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.EndTime).HasColumnType("datetime");
-
-                entity.Property(e => e.StartDate).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("User");
-
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
-                entity.Property(e => e.FirstName)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.FirstName).IsUnicode(false);
 
-                entity.Property(e => e.LastName)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.LastName).IsUnicode(false);
             });
 
             modelBuilder.Entity<UserProject>(entity =>
             {
                 entity.HasKey(e => new { e.UserId, e.ProjectId });
-
-                entity.ToTable("UserProject");
-
-                entity.Property(e => e.AssignedDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.Project)
                     .WithMany(p => p.UserProjects)

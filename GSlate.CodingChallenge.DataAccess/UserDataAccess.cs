@@ -12,8 +12,9 @@ namespace GSlate.CodingChallenge.DataAccess
     {
         public List<User> GetUsers()
         {
-            using GSlateContext __Context = new GSlateContext();
-            return __Context.Users.ToList();
+           using GSlateContext __Context = new GSlateContext();
+           return __Context.Users.ToList();
+            
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GSlate.CodingChallenge.Common.Models.ViewModels
 {
-    public partial  class UserProjectViewModel: Entity.UserProject
+    public partial  class UserProjectViewModel:UserProject
     {
         public String TimeToStart
         {

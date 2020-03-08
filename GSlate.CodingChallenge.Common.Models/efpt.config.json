@@ -1,35 +1,34 @@
 ﻿{
-  "ContextClassName": "GslateContext",
-  "ContextNamespace": "",
-  "DefaultDacpacSchema": null,
-  "DoNotCombineNamespace": false,
-  "IdReplace": false,
-  "IncludeConnectionString": false,
-  "ModelNamespace": "",
-  "OutputContextPath": null,
-  "OutputPath": "Entity",
-  "ProjectRootNamespace": "GSlate.CodingChallenge.Common.Models",
-  "SelectedHandlebarsLanguage": 0,
-  "SelectedToBeGenerated": 2,
-  "Tables": [
-    {
-      "HasPrimaryKey": true,
-      "Name": "[dbo].[Project]"
-    },
-    {
-      "HasPrimaryKey": true,
-      "Name": "[dbo].[User]"
-    },
-    {
-      "HasPrimaryKey": true,
-      "Name": "[dbo].[UserProject]"
-    }
-  ],
-  "UseDatabaseNames": false,
-  "UseFluentApiOnly": true,
-  "UseHandleBars": false,
-  "UseInflector": true,
-  "UseLegacyPluralizer": false,
-  "UseSpatial": false
- 
+   "ContextClassName": "GslateContext",
+   "ContextNamespace": "",
+   "DefaultDacpacSchema": null,
+   "DoNotCombineNamespace": false,
+   "IdReplace": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": "",
+   "OutputContextPath": null,
+   "OutputPath": "Entity",
+   "ProjectRootNamespace": "GSlate.CodingChallenge.Common.Models",
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 2,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Project]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[User]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[UserProject]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseSpatial": false
 }
