@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GSlate.CodingChallenge.BusinessLogic.Interfaces\GSlate.CodingChallenge.BusinessLogic.Interfaces.csproj" />
     <ProjectReference Include="..\GSlate.CodingChallenge.Common.Models\GSlate.CodingChallenge.Common.Models.csproj" />
+    <ProjectReference Include="..\GSlate.CodingChallenge.Comon.Helper.ToDTO\GSlate.CodingChallenge.Common.Helper.Transform.csproj" />
     <ProjectReference Include="..\GSlate.CodingChallenge.DataAccess.Interfaces\GSlate.CodingChallenge.DataAccess.Interfaces.csproj" />
   </ItemGroup>
 

@@ -25,7 +25,7 @@ namespace GSlate.CodingChallenge.FrontEnd.WebPage.Controllers
         public IActionResult Index()
         {
 
-            _userBussinesLogic.GetUsers();
+            ViewBag.Users = _userBussinesLogic.GetUsers();
             return View();
         }     
 

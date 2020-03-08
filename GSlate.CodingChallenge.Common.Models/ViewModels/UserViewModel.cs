@@ -6,18 +6,9 @@ using System.Text;
 
 namespace GSlate.CodingChallenge.Common.Models.ViewModels
 {
-    public partial class UserViewModel
+    public partial class UserViewModel : User
     {
         
-
-        public int Id { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string FirstName { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string LastName { get; set; }
-
         
         public String FullName { 
             get { return String.Format("{0} {1}", FirstName, LastName); } 

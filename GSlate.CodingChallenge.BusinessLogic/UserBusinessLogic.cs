@@ -5,6 +5,7 @@ using GSlate.CodingChallenge.Common.Models.ViewModels;
 using GSlate.CodingChallenge.DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
+using GSlate.CodingChallenge.Common.Helper.Transform;
 
 namespace GSlate.CodingChallenge.BusinessLogic
 {
@@ -19,7 +20,7 @@ namespace GSlate.CodingChallenge.BusinessLogic
         public List<UserViewModel> GetUsers()
         { 
             
-            return UsertoDTO(_userDataAccess.GetUsers());
+            return ToDtO.UserListToDto(_userDataAccess.GetUsers());
            
         }
     }
