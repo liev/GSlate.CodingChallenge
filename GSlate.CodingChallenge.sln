@@ -27,9 +27,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{39
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{29757C30-8B7E-4168-B90A-1DF9EAF6038D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSlate.CodingChallenge.Common.Helper.Transform", "GSlate.CodingChallenge.Comon.Helper.ToDTO\GSlate.CodingChallenge.Common.Helper.Transform.csproj", "{F5CFAC8F-A83D-4AEE-9457-7CABAB209B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSlate.CodingChallenge.Common.Helper.Transform", "GSlate.CodingChallenge.Comon.Helper.ToDTO\GSlate.CodingChallenge.Common.Helper.Transform.csproj", "{F5CFAC8F-A83D-4AEE-9457-7CABAB209B2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helper", "Helper", "{85142936-3F1F-443E-B32F-1BFEC5F8D21C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseScripts", "DataBaseScripts", "{34F7E96B-9539-44D7-B342-F4F89BDD844F}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\lievc\OneDrive\Escritorio\GSlateQuery.sql = C:\Users\lievc\OneDrive\Escritorio\GSlateQuery.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

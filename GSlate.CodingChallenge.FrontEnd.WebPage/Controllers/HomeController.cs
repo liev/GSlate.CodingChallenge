@@ -43,20 +43,11 @@ namespace GSlate.CodingChallenge.FrontEnd.WebPage.Controllers
         public JsonResult RequestProjects(int Id)
         {
             var data = new List<UserProjectViewModel>();
-            var message = string.Empty;
+            var message = string.Empty;            
             
-            try
-            {
-                // data = JsonConvert.SerializeObject(_userProjectBussinesLogic.GetUSerProjectsByUser(Id), Formatting.None, jsonSerializerSettings);
-                data = _userProjectBussinesLogic.GetUSerProjectsByUser(Id);                
-                return Json(data);
-            }
-            catch (Exception e)
-            {
-                 message = e.Message;
-            }
-            return Json(new { success = true, data = data, message = message });
-
+            data = _userProjectBussinesLogic.GetUSerProjectsByUser(Id);                
+            return Json(data);
+            
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
