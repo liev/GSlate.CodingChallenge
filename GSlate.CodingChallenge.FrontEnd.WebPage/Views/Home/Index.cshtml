@@ -6,38 +6,91 @@
 
 }
 
-    <div class="text-center">
+    <div class="text-center ">
         @*<h1 class="display-4">Welcome</h1>
         <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
         @Html.DropDownList("UserSelector",
                     new SelectList(users,"Id","FullName"), "--", new { @class = "form-control" })
 
     </div>
-
-     <div id="DivGrid">
+    
+    <div class="container fluid card rounded mt-sm-3 mt-lg-5 mt-lx-5 mt-md-5 text-center">
+        <div class="row card-header">
+            <div class="col-2">
+                Project Id
+            </div>
+            <div class="col-2">
+                Start Date
+            </div>
+            <div class="col-2">
+                Time To Start
+            </div>
+            <div class="col-2">
+                End Date
+            </div>
+            <div class="col-2">
+                Credits
+            </div>
+            <div class="col-2">
+                Status
+            </div>
+        </div>
+    </div>
+    
+     <div id="DivGrid" class="container text-center">
          
      </div>
 
 <script>
-
-
-    $(document).ready(
-        //Funtion to get Projects by User
+     var data="";  // Test variable
+    $(document).ready(       
+        //Function to get Projects by User
         function () {
-            $("#UserSelector").change(function () {
-                //console.log($(this).val());
+            $("#UserSelector").change(function () {                
+                var id = $(this).val();             
+                $("#DivGrid").html(""); //Clear Div
 
-                $.ajax({
+               $.ajax({
                     type: "POST",
-                    url: '@Url.Action("RequestProjects", "Home")',
-                    contentType: "application/json; charset=utf-8",
-                    data: { userId: $(this).val() },
-                    dataType: "json",
-                    success: function(recData) { alert('Success'); },
-                    error: function() { alert('A error'); }
-                });
-
-
+                    url: "@Url.Action("RequestProjects")",
+                    data: {Id: id},
+                    dataType: "JSON",
+                    success: function (__data) {                     
+                        
+                        CreateGrid(__data);
+                    },
+                    error: function (req, status, error) {
+                        alert(error);
+                    }
+                }); 
             });
         });
+
+    function CreateGrid(data)
+    {
+
+        var container = $("#DivGrid");
+
+        $.each(data, function (key, row) {
+
+            var Content =
+                '<div class="row">' +
+                '<div class="col-2 center">' + row['projectId'] + '</div>' +
+                '<div class="col-2 center">' + row['startDate'].slice(0,10) + '</div>' +
+                '<div class="col-2 center">' + row['timeToStart'] + '</div>' +
+                '<div class="col-2 center">' + row['endDate'].slice(0,10) + '</div>' +
+                '<div class="col-2 center">' + row['credits'] + '</div>' +
+                '<div class="col-2 center">' + row['status'] + '</div>' +
+                '</div>';
+
+            $(Content).appendTo('#DivGrid');
+
+
+        });
+
+        
+    }
+    
+
+
 </script>

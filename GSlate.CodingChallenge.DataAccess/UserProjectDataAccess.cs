@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace GSlate.CodingChallenge.DataAccess
 {
@@ -13,7 +14,7 @@ namespace GSlate.CodingChallenge.DataAccess
         public List<UserProject> GetUserProjectsByUser(int UserId)
         {
             using GSlateContext __Context = new GSlateContext();
-            return __Context.UserProjects.Where(p => p.UserId == UserId).ToList();
+            return __Context.UserProjects.Include(up=>up.Project).Include(up=>up.User).Where(p => p.UserId == UserId).ToList();
         }
     }
 }
